@@ -12,7 +12,7 @@ let [valids, setValid] = useState("")
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    if (definition.definition == "") {
+    if (!definition.valid) {
       setValid("The word you searched is not available")
     }
     else{
